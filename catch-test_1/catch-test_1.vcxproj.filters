@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов\for_tests">
+      <UniqueIdentifier>{694a8053-ba8d-4edc-9a49-48864b1a5671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\for_tests_shapes">
+      <UniqueIdentifier>{58a40193-76e7-48bb-8fd1-55e1209f64b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="catch-sample_1.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tests.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CCanvas.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CCircle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CLineSegment.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CRectangle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CTriangle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="tests_for_programm.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\ParseStringModule.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\laba_4_oop\CalcModule.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="tests_circle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test_rectagnle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="tests_triangle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test_line.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test_data.txt">
+      <Filter>Файлы ресурсов\for_tests</Filter>
+    </Text>
+    <Text Include="test_data_2.txt">
+      <Filter>Файлы ресурсов\for_tests</Filter>
+    </Text>
+    <Text Include="test_data_3.txt">
+      <Filter>Файлы ресурсов\for_tests</Filter>
+    </Text>
+    <Text Include="test_data_4.txt">
+      <Filter>Файлы ресурсов\for_tests</Filter>
+    </Text>
+    <Text Include="test_data_circle.txt">
+      <Filter>Файлы ресурсов\for_tests_shapes</Filter>
+    </Text>
+    <Text Include="test_data_rectangle.txt">
+      <Filter>Файлы ресурсов\for_tests_shapes</Filter>
+    </Text>
+    <Text Include="test_data_triangle.txt">
+      <Filter>Файлы ресурсов\for_tests_shapes</Filter>
+    </Text>
+    <Text Include="test_data_line.txt">
+      <Filter>Файлы ресурсов\for_tests_shapes</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

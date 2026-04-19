@@ -1,0 +1,3 @@
+triangle 0 0 3 0 0 4 ff0000 00ff00
+triangle 0 0 6 0 0 8 0000ff ffffff
+triangle -3 -4 0 -4 -3 0 FF0000 00FF00
