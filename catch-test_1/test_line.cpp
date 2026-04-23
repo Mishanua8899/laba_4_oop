@@ -9,7 +9,8 @@ TEST_CASE("test line segment")
 {
     std::ifstream InFile("test_data_line.txt");
     std::vector<std::unique_ptr<IShape>> shapes;
-    GetShapes(InFile, shapes);
+    std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
+    GetShapes(InFile, shapes, drawableShapes);
 
     REQUIRE(shapes.size() == 3); 
 

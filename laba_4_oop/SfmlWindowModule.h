@@ -6,4 +6,4 @@
 #include "CCanvas.h"
 #include "IShape.h"
 
-void ShowPicture(sf::RenderWindow& window, CCanvas& canvas, std::vector<std::unique_ptr<IShape>>& shapes);
+void ShowPicture(sf::RenderWindow& window, CCanvas& canvas, std::vector<std::unique_ptr<ICanvasDrawable>>& shapes);

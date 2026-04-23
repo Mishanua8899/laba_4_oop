@@ -2,15 +2,13 @@
 #include "ISolidShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
-class CTriangle : public ISolidShape
+class CTriangle : public ISolidShape, public ICanvasDrawable
 {
 public:
     CTriangle(CPoint v1, CPoint v2, CPoint v3, uint32_t outlineColor, uint32_t fillColor);
     double GetArea() const override;
     double GetPerimeter() const override;
     std::string ToString() const override;
-    //uint32_t GetOutlineColor() const override;
-   //uint32_t GetFillColor() const override;
     std::string GetShapeType() const override;
 
     void Draw(ICanvas& canvas) const override;

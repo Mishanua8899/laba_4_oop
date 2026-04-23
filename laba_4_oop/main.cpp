@@ -7,12 +7,13 @@
 
 // TODO: можно в солидшейп вынести филлколор и оутлайн чтобы избавиться от полей в фигурах
 // TODO: iDrawable наследовать для фигур 
-// узнать зачем использовать ICanvas а не просто использовать CCanvas
+
 int main(int argc, char* argv[])
 {
 	std::vector<std::unique_ptr<IShape>> shapes;
-	
-	if (TryGetShape(argc, shapes, argv)) return EXIT_FAILURE;
+	std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
+
+	if (TryGetShape(argc, shapes, drawableShapes, argv)) return EXIT_FAILURE;
 
 	auto maxAreaShape = MaxArea(shapes);
 	auto maxPerimeterShape = MaxPerimeter(shapes);
@@ -25,7 +26,7 @@ int main(int argc, char* argv[])
 	window.setView(window.getDefaultView());
 	CCanvas canvas(window);
 
-	ShowPicture(window, canvas, shapes);
+	ShowPicture(window, canvas, drawableShapes);
 
 	return EXIT_SUCCESS;
 }

@@ -2,7 +2,7 @@
 #include <string>
 #include <cstdint>
 #include "ICanvasDrawable.h"
-class IShape : public ICanvasDrawable
+class IShape 
 {
 public:
     virtual ~IShape() = default;

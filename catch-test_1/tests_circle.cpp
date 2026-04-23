@@ -9,7 +9,8 @@ TEST_CASE("test circle")
 {
 	std::ifstream InFile("test_data_circle.txt");
 	std::vector<std::unique_ptr<IShape>> shapes;
-	GetShapes(InFile, shapes);
+	std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
+	GetShapes(InFile, shapes, drawableShapes);
 	SECTION("test perimeter calculation")
 	{
 		REQUIRE(shapes[0]->GetPerimeter() == 31.4);

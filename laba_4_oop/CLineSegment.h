@@ -2,14 +2,13 @@
 #include "IShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
-class CLineSegment : public IShape
+class CLineSegment : public IShape, public ICanvasDrawable
 {
 public:
     CLineSegment(CPoint startPoint, CPoint endPoint, uint32_t outlineColor);
     double GetArea() const override;
     double GetPerimeter() const override;
     std::string ToString() const override;
-    //uint32_t GetOutlineColor() const override;
     std::string GetShapeType() const override;
 
     void Draw(ICanvas& canvas) const override;

@@ -1,6 +1,6 @@
 #include "SfmlWindowModule.h"
-
-void ShowPicture(sf::RenderWindow& window, CCanvas& canvas, std::vector<std::unique_ptr<IShape>>& shapes)
+#include "ICanvasDrawable.h"
+void ShowPicture(sf::RenderWindow& window, CCanvas& canvas, std::vector<std::unique_ptr<ICanvasDrawable>>& shapes)
 {
     while (window.isOpen())
     {
