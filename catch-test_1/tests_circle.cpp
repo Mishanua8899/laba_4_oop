@@ -5,6 +5,8 @@
 #include <fstream>
 #include <memory>
 
+
+
 TEST_CASE("test circle")
 {
 	std::ifstream InFile("test_data_circle.txt");

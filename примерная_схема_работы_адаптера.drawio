@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="cdr4xvln0ni765iFQ_DI">
+    <mxGraphModel dx="1873" dy="1098" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;classDiagram\n  class ISolidShape {\n    &lt;&lt;interface&gt;&gt;\n  }\n  class ICanvasDrawable {\n    &lt;&lt;interface&gt;&gt;\n  }\n  class CCircle {\n    - CPoint center\n    - double radius\n    - sf::CircleShape circle\n    + CCircle(CPoint center, double radius, uint32_t outlineColor, uint32_t fillColor)\n    + GetArea() const double\n    + GetPerimeter() const double\n    + ToString() const std::string\n    + GetShapeType() const std::string\n    + Draw(ICanvas&amp; canvas) const void\n    + GetCenter() const CPoint\n    + GetRadius() const double\n  }\n  ISolidShape &lt;|-- CCircle\n  ICanvasDrawable &lt;|-- CCircle&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="BlaVDU0yIIqwqEs6PCLx-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-31" edge="1" parent="BlaVDU0yIIqwqEs6PCLx-1" source="BlaVDU0yIIqwqEs6PCLx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="BlaVDU0yIIqwqEs6PCLx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;IShape&lt;/b&gt;" mermaidId="n:ISolidShape" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=6;marginBottom=6;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;ISolidShape&lt;/b&gt;" id="BlaVDU0yIIqwqEs6PCLx-2">
+          <mxCell parent="BlaVDU0yIIqwqEs6PCLx-1" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=6;marginBottom=6;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
+            <mxGeometry height="108" width="106" x="30" y="494" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-3" parent="BlaVDU0yIIqwqEs6PCLx-2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;movable=0;resizable=0;rotatable=0;points=[];fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="«interface»" vertex="1">
+          <mxGeometry height="24" width="106" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-4" parent="BlaVDU0yIIqwqEs6PCLx-2" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
+          <mxGeometry height="24" width="106" y="78" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;CCircle&lt;/b&gt;" mermaidId="n:CCircle" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;CCircle&lt;/b&gt;" id="BlaVDU0yIIqwqEs6PCLx-8">
+          <mxCell parent="BlaVDU0yIIqwqEs6PCLx-1" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
+            <mxGeometry height="360" width="623" x="260" y="428" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-9" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="- CPoint center" vertex="1">
+          <mxGeometry height="24" width="623" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-10" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="- double radius" vertex="1">
+          <mxGeometry height="24" width="623" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-11" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="- sf::CircleShape circle" vertex="1">
+          <mxGeometry height="24" width="623" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-12" parent="BlaVDU0yIIqwqEs6PCLx-8" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
+          <mxGeometry height="24" width="623" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-13" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ CCircle(CPoint center, double radius, uint32_t outlineColor, uint32_t fillColor)" vertex="1">
+          <mxGeometry height="24" width="623" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-14" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ GetArea() const double" vertex="1">
+          <mxGeometry height="24" width="623" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-15" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ GetPerimeter() const double" vertex="1">
+          <mxGeometry height="24" width="623" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-16" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ ToString() const std::string" vertex="1">
+          <mxGeometry height="24" width="623" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-17" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ GetShapeType() const std::string" vertex="1">
+          <mxGeometry height="24" width="623" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-18" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ Draw(ICanvas&amp; canvas) const void" vertex="1">
+          <mxGeometry height="24" width="623" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-19" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ GetCenter() const CPoint" vertex="1">
+          <mxGeometry height="24" width="623" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-20" parent="BlaVDU0yIIqwqEs6PCLx-8" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+ GetRadius() const double" vertex="1">
+          <mxGeometry height="24" width="623" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;html=1;" value="&lt;b&gt;sf::CircleShape&lt;/b&gt;&lt;br&gt;radius, pointCount" vertex="1">
+          <mxGeometry height="80" width="140" x="480" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-29" edge="1" parent="1" source="BlaVDU0yIIqwqEs6PCLx-24" style="endArrow=diamondThin;endSize=10;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=3;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-38" edge="1" parent="1" source="BlaVDU0yIIqwqEs6PCLx-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;dashed=1;strokeWidth=3;endSize=9;" target="BlaVDU0yIIqwqEs6PCLx-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;b&gt;ICanvas&lt;/b&gt;" mermaidId="n:ISolidShape" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=6;marginBottom=6;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;ISolidShape&lt;/b&gt;" id="BlaVDU0yIIqwqEs6PCLx-35">
+          <mxCell parent="1" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=6;marginBottom=6;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
+            <mxGeometry height="108" width="106" x="800" y="860" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-36" parent="BlaVDU0yIIqwqEs6PCLx-35" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;movable=0;resizable=0;rotatable=0;points=[];fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="«interface»" vertex="1">
+          <mxGeometry height="24" width="106" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="BlaVDU0yIIqwqEs6PCLx-37" parent="BlaVDU0yIIqwqEs6PCLx-35" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
+          <mxGeometry height="24" width="106" y="78" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

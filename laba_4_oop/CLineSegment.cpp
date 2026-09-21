@@ -54,5 +54,18 @@ std::string CLineSegment::GetShapeType() const
 }
 
 void CLineSegment::Draw(ICanvas& canvas) const {
-    canvas.DrawLine(startPoint, endPoint, outlineColor);
+    line.setPrimitiveType(sf::PrimitiveType::Lines);
+
+    sf::Vertex startVertex;
+    startVertex.position = sf::Vector2f(static_cast<float>(startPoint.x), static_cast<float>(startPoint.y));
+    startVertex.color = sf::Color((outlineColor << 8) | 0x000000FF);
+
+    sf::Vertex endVertex;
+    endVertex.position = sf::Vector2f(static_cast<float>(endPoint.x), static_cast<float>(endPoint.y));
+    endVertex.color = sf::Color((outlineColor << 8) | 0x000000FF);
+
+    line.append(startVertex);
+    line.append(endVertex);
+
+    canvas.Draw(line);
 }

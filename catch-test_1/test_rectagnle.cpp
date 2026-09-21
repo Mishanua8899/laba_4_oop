@@ -5,6 +5,10 @@
 #include <fstream>
 #include <memory>
 
+// Перегрузка оператора == для sf::RectangleShape (используется в CRectangle)
+
+
+
 TEST_CASE("test rectangle")
 {
     std::ifstream InFile("test_data_rectangle.txt");

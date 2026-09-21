@@ -4,9 +4,12 @@
 #include "CalcModule.h"
 #include "SfmlWindowModule.h"
 #include "ParseStringModule.h"
+#include "OutputModule.h"
 
-// TODO: можно в солидшейп вынести филлколор и оутлайн чтобы избавиться от полей в фигурах
-// TODO: iDrawable наследовать для фигур 
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGTH = 600;
+const std::string WINDOW_NAME = "Window";
+
 
 int main(int argc, char* argv[])
 {
@@ -17,16 +20,15 @@ int main(int argc, char* argv[])
 
 	auto maxAreaShape = MaxArea(shapes);
 	auto maxPerimeterShape = MaxPerimeter(shapes);
-	std::cout << "Max Area Shape: " << std::endl;
-	std::cout << maxAreaShape->ToString() << std::endl;
-	std::cout << "Max Perimeter Shape: " << std::endl;
-	std::cout << maxPerimeterShape->ToString() << std::endl;
+	
+	PrintMaxShapesInfo(maxPerimeterShape, maxAreaShape);
 
-	sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Window");
+	sf::RenderWindow window(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGTH }), WINDOW_NAME);
 	window.setView(window.getDefaultView());
 	CCanvas canvas(window);
 
 	ShowPicture(window, canvas, drawableShapes);
+	GenerateShapesInfoFile(shapes);
 
 	return EXIT_SUCCESS;
 }

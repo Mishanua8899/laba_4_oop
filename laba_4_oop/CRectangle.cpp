@@ -74,13 +74,25 @@ double CRectangle::GetHeight() const
 }
 
 void CRectangle::Draw(ICanvas& canvas) const {
-    CPoint rightTop(leftTop.x + width, leftTop.y);
+    /*CPoint rightTop(leftTop.x + width, leftTop.y);
     CPoint rightBottom(leftTop.x + width, leftTop.y + height);
     CPoint leftBottom(leftTop.x, leftTop.y + height);
     std::vector<CPoint> points = { leftTop, rightTop, rightBottom, leftBottom };
-    canvas.FillPolygon(points, fillColor);
+    canvas.DrawPolygon(points, fillColor);
     canvas.DrawLine(leftTop, rightTop, outlineColor);
     canvas.DrawLine(rightTop, rightBottom, outlineColor);
     canvas.DrawLine(rightBottom, leftBottom, outlineColor);
-    canvas.DrawLine(leftBottom, leftTop, outlineColor);
+    canvas.DrawLine(leftBottom, leftTop, outlineColor);*/
+
+    rectangle.setSize({ static_cast<float>(width), static_cast<float>(height) });
+
+    sf::Color Fcolor((fillColor << 8) | 0x000000FF);
+    sf::Color Ocolor((outlineColor << 8) | 0x000000FF);
+    rectangle.setFillColor(Fcolor);
+    rectangle.setOutlineThickness(1.f);
+    rectangle.setOutlineColor(Ocolor);
+
+    rectangle.setPosition({ static_cast<float>(leftTop.x), static_cast<float>(leftTop.y) });
+
+    canvas.Draw(rectangle);
 }

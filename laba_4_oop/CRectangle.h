@@ -2,6 +2,7 @@
 #include "ISolidShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
+#include "SFML/Graphics.hpp"
 class CRectangle : public ISolidShape, public ICanvasDrawable
 {
 public:
@@ -23,4 +24,6 @@ private:
     CPoint leftTop;
     double width;
     double height;
+
+    mutable sf::RectangleShape rectangle;
 };

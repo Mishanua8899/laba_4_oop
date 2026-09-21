@@ -76,13 +76,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -94,13 +94,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -110,13 +110,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -128,13 +128,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\include;..</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\HOME PC\source\repos\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\HOME PC\Desktop\ПГТУ 3 курс\ООД\laba_4_oop\SFML-3.0.2-Windows.VS2022.x64\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -147,6 +147,7 @@
     <ClCompile Include="CTriangle.cpp" />
     <ClCompile Include="ICanvas.h" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OutputModule.cpp" />
     <ClCompile Include="ParseStringModule.cpp" />
     <ClCompile Include="SfmlWindowModule.cpp" />
   </ItemGroup>
@@ -161,6 +162,7 @@
     <ClInclude Include="ICanvasDrawable.h" />
     <ClInclude Include="IShape.h" />
     <ClInclude Include="ISolidShape.h" />
+    <ClInclude Include="OutputModule.h" />
     <ClInclude Include="ParseStringModule.h" />
     <ClInclude Include="SfmlWindowModule.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "IShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
+#include "SFML/Graphics.hpp"
 class CLineSegment : public IShape, public ICanvasDrawable
 {
 public:
@@ -19,6 +20,8 @@ public:
 private:
     CPoint startPoint;
     CPoint endPoint;
+
+    mutable sf::VertexArray line;
 };
 
 

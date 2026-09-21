@@ -2,6 +2,7 @@
 #include "ISolidShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
+#include "SFML/Graphics.hpp"
 class CTriangle : public ISolidShape, public ICanvasDrawable
 {
 public:
@@ -21,4 +22,6 @@ private:
     CPoint vertex1;
     CPoint vertex2;
     CPoint vertex3;
+
+    mutable sf::ConvexShape triangle;
 };

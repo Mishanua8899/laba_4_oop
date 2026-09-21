@@ -5,6 +5,8 @@
 #include <fstream>
 #include <memory>
 
+
+
 TEST_CASE("test line segment")
 {
     std::ifstream InFile("test_data_line.txt");

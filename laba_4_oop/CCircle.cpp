@@ -63,7 +63,19 @@ double CCircle::GetRadius() const
 }
 
 void CCircle::Draw(ICanvas& canvas) const {
-    canvas.DrawCircle(center, radius, outlineColor);
-    canvas.FillCircle(center, radius, fillColor);
+
+    circle.setRadius(radius);
+
+    double centerX = center.x - radius;
+    double centerY = center.y - radius;
+    circle.setPosition(sf::Vector2f(static_cast<float>(centerX), static_cast<float>(centerY)));
+
+    sf::Color Fcolor((fillColor << 8) | 0x000000FF);
+    sf::Color Ocolor((outlineColor << 8) | 0x000000FF);
+    circle.setFillColor(Fcolor);
+    circle.setOutlineThickness(1.f);
+    circle.setOutlineColor(Ocolor);
+
+    canvas.Draw(circle);
 }
 

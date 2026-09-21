@@ -74,9 +74,24 @@ std::string CTriangle::GetShapeType() const
 }
 
 void CTriangle::Draw(ICanvas& canvas) const {
-    std::vector<CPoint> points = { vertex1, vertex2, vertex3 };
-    canvas.FillPolygon(points, fillColor);
+    /*std::vector<CPoint> points = {vertex1, vertex2, vertex3};
+    canvas.DrawPolygon(points, fillColor);
     canvas.DrawLine(vertex1, vertex2, outlineColor);
     canvas.DrawLine(vertex2, vertex3, outlineColor);
-    canvas.DrawLine(vertex3, vertex1, outlineColor);
+    canvas.DrawLine(vertex3, vertex1, outlineColor);*/
+    std::vector<CPoint> vertexes{ vertex1, vertex2, vertex3 };
+    sf::ConvexShape polygon;
+    polygon.setPointCount(3);
+    for (size_t i = 0; i < vertexes.size(); ++i)
+    {
+        polygon.setPoint(i, sf::Vector2f(static_cast<float>(vertexes[i].x), static_cast<float>(vertexes[i].y)));
+    }
+
+    sf::Color Fcolor((fillColor << 8) | 0x000000FF);
+    sf::Color Ocolor((outlineColor << 8) | 0x000000FF);
+    polygon.setFillColor(Fcolor);
+    polygon.setOutlineThickness(1.f);
+    polygon.setOutlineColor(Ocolor);
+
+    canvas.Draw(polygon);
 }

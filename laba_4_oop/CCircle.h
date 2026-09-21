@@ -2,6 +2,7 @@
 #include "ISolidShape.h"
 #include "CPoint.h"
 #include "ICanvasDrawable.h"
+#include "SFML/Graphics.hpp"
 class CCircle : public ISolidShape, public ICanvasDrawable
 {
 public:
@@ -19,4 +20,6 @@ public:
 private:
     CPoint center;
     double radius;
+
+    mutable sf::CircleShape circle;
 };
