@@ -1,4 +1,5 @@
 #include "ParseStringModule.h"
+#include "Constants.h"
 #include "IShape.h"
 #include "CRectangle.h"
 #include "CTriangle.h"
@@ -9,22 +10,21 @@
 #include <fstream>
 #include <string>
 
-constexpr const char* ERROR_MESSAGE_PARSE = "ERROR: cannot parse this line";
-constexpr const char* ERROR_MESSAGE_PARAMS = "ERROR: incorrect number of parameters";
+
 
 static uint32_t ParseColor(const std::string& hex)
 {
-    if (hex.size() == 6)
+    if (hex.size() == Constants::COUNT_OF_COLOR_BYTES)
     {
         return std::stoul(hex, nullptr, 16);
     }
     else
     {
-        throw std::invalid_argument("hex color must be described in 6 symbols");
+        throw std::invalid_argument(Constants::ERROR_MESSAGE_PARSE_COLOR);
     }
 }
 
-void SetRectangle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, std::stringstream& lineStream)
+void SetRectangle(std::vector<std::unique_ptr<IShape>>& shapes, std::stringstream& lineStream)
 {
     double x, y, w, h;
     std::string outlineStr, fillStr;
@@ -35,20 +35,19 @@ void SetRectangle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std:
             uint32_t outline = ParseColor(outlineStr);
             uint32_t fill = ParseColor(fillStr);
             shapes.push_back(std::make_unique<CRectangle>(CPoint(x, y), w, h, outline, fill));
-            drawableShapes.push_back(std::make_unique<CRectangle>(CPoint(x, y), w, h, outline, fill));
         }
         catch (...)
         {
-            std::cout << ERROR_MESSAGE_PARSE << std::endl;
+            std::cout << Constants::ERROR_MESSAGE_PARSE << std::endl;
         }
     }
     else
     {
-        std::cout << ERROR_MESSAGE_PARAMS << std::endl;
+        std::cout << Constants::ERROR_MESSAGE_PARAMS << std::endl;
     }
 }
 
-void SetLine(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, std::stringstream& lineStream)
+void SetLine(std::vector<std::unique_ptr<IShape>>& shapes, std::stringstream& lineStream)
 {
     double x1, y1, x2, y2;
     std::string outlineStr;
@@ -58,20 +57,19 @@ void SetLine(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::uniq
         {
             uint32_t outline = ParseColor(outlineStr);
             shapes.push_back(std::make_unique<CLineSegment>(CPoint(x1, y1), CPoint(x2, y2), outline));
-            drawableShapes.push_back(std::make_unique<CLineSegment>(CPoint(x1, y1), CPoint(x2, y2), outline));
         }
         catch (...)
         {
-            std::cout << ERROR_MESSAGE_PARSE << std::endl;
+            std::cout << Constants::ERROR_MESSAGE_PARSE << std::endl;
         }
     }
     else
     {
-        std::cout << ERROR_MESSAGE_PARAMS << std::endl;
+        std::cout << Constants::ERROR_MESSAGE_PARAMS << std::endl;
     }
 }
 
-void SetTriangle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, std::stringstream& lineStream)
+void SetTriangle(std::vector<std::unique_ptr<IShape>>& shapes, std::stringstream& lineStream)
 {
     double x1, y1, x2, y2, x3, y3;
     std::string outlineStr, fillStr;
@@ -82,20 +80,19 @@ void SetTriangle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::
             uint32_t outline = ParseColor(outlineStr);
             uint32_t fill = ParseColor(fillStr);
             shapes.push_back(std::make_unique<CTriangle>(CPoint(x1, y1), CPoint(x2, y2), CPoint(x3, y3), outline, fill));
-            drawableShapes.push_back(std::make_unique<CTriangle>(CPoint(x1, y1), CPoint(x2, y2), CPoint(x3, y3), outline, fill));
         }
         catch (...)
         {
-            std::cout << ERROR_MESSAGE_PARSE << std::endl;
+            std::cout << Constants::ERROR_MESSAGE_PARSE << std::endl;
         }
     }
     else
     {
-        std::cout << ERROR_MESSAGE_PARAMS << std::endl;
+        std::cout << Constants::ERROR_MESSAGE_PARAMS << std::endl;
     }
 }
 
-void SetCircle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, std::stringstream& lineStream)
+void SetCircle(std::vector<std::unique_ptr<IShape>>& shapes, std::stringstream& lineStream)
 {
     double x, y, radius;
     std::string outlineStr, fillStr;
@@ -106,40 +103,39 @@ void SetCircle(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::un
             uint32_t outline = ParseColor(outlineStr);
             uint32_t fill = ParseColor(fillStr);
             shapes.push_back(std::make_unique<CCircle>(CPoint(x, y), radius, outline, fill));
-            drawableShapes.push_back(std::make_unique<CCircle>(CPoint(x, y), radius, outline, fill));
         }
         catch (...)
         {
-            std::cout << ERROR_MESSAGE_PARSE << std::endl;
+            std::cout << Constants::ERROR_MESSAGE_PARSE << std::endl;
         }
     }
     else
     {
-        std::cout << ERROR_MESSAGE_PARAMS << std::endl;
+        std::cout << Constants::ERROR_MESSAGE_PARAMS << std::endl;
     }
 }
 
-void SetShape(std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, std::string& word, std::stringstream& lineStream)
+void SetShape(std::vector<std::unique_ptr<IShape>>& shapes, std::string& word, std::stringstream& lineStream)
 {
-    if (word == "rectangle")
+    if (word == Constants::TYPE_RECTANGLE)
     {
-        SetRectangle(shapes, drawableShapes, lineStream);
+        SetRectangle(shapes, lineStream);
     }
-    else if (word == "line")
+    else if (word == Constants::TYPE_LINE)
     {
-        SetLine(shapes, drawableShapes, lineStream);
+        SetLine(shapes, lineStream);
     }
-    else if (word == "triangle")
+    else if (word == Constants::TYPE_TRIANGLE)
     {
-        SetTriangle(shapes, drawableShapes, lineStream);
+        SetTriangle(shapes, lineStream);
     }
-    else if (word == "circle")
+    else if (word == Constants::TYPE_CIRCLE)
     {
-        SetCircle(shapes, drawableShapes, lineStream);
+        SetCircle(shapes, lineStream);
     }
 }
 
-void GetShapes(std::istream& fIn, std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes)
+void GetShapes(std::istream& fIn, std::vector<std::unique_ptr<IShape>>& shapes)
 {
     std::string line;
     while (std::getline(fIn, line))
@@ -148,15 +144,15 @@ void GetShapes(std::istream& fIn, std::vector<std::unique_ptr<IShape>>& shapes, 
         std::stringstream lineStream(line);
         std::string word;
         lineStream >> word;
-        SetShape(shapes, drawableShapes, word, lineStream);
+        SetShape(shapes, word, lineStream);
     }
 }
 
-int TryGetShape(int argc, std::vector<std::unique_ptr<IShape>>& shapes, std::vector<std::unique_ptr<ICanvasDrawable>>& drawableShapes, char* argv[])
+int TryGetShape(int argc, std::vector<std::unique_ptr<IShape>>& shapes, char* argv[])
 {
     if (argc == 1)
     {
-        GetShapes(std::cin, shapes, drawableShapes);
+        GetShapes(std::cin, shapes);
         return 0;
     }
     else if (argc == 2)
@@ -167,12 +163,12 @@ int TryGetShape(int argc, std::vector<std::unique_ptr<IShape>>& shapes, std::vec
             std::cout << "ERROR: cannot open " << argv[1] << std::endl;
             return 1;
         }
-        GetShapes(inFile, shapes, drawableShapes);
+        GetShapes(inFile, shapes);
         return 0;
     }
     else
     {
-        std::cout << ERROR_MESSAGE_PARAMS << std::endl;
+        std::cout << Constants::ERROR_MESSAGE_PARAMS << std::endl;
         return 1;
     }
 }

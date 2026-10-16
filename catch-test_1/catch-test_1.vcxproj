@@ -142,8 +142,6 @@
     <ClInclude Include="catch-sample_1.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\laba_4_oop\CalcModule.cpp" />
-    <ClCompile Include="..\laba_4_oop\CCanvas.cpp" />
     <ClCompile Include="..\laba_4_oop\CCircle.cpp" />
     <ClCompile Include="..\laba_4_oop\CLineSegment.cpp" />
     <ClCompile Include="..\laba_4_oop\CRectangle.cpp" />

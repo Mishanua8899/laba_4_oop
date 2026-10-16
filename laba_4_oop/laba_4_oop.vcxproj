@@ -139,32 +139,46 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CalcModule.cpp" />
-    <ClCompile Include="CCanvas.cpp" />
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="CCircle.cpp" />
     <ClCompile Include="CLineSegment.cpp" />
+    <ClCompile Include="CompositeShape.cpp" />
     <ClCompile Include="CRectangle.cpp" />
     <ClCompile Include="CTriangle.cpp" />
-    <ClCompile Include="ICanvas.h" />
+    <ClCompile Include="Drawing.cpp" />
+    <ClCompile Include="DrawingRenderer.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OutputModule.cpp" />
     <ClCompile Include="ParseStringModule.cpp" />
-    <ClCompile Include="SfmlWindowModule.cpp" />
+    <ClCompile Include="SelectionManager.cpp" />
+    <ClCompile Include="SFMLCircleAdapter.cpp" />
+    <ClCompile Include="SFMLLineAdapter.cpp" />
+    <ClCompile Include="SFMLRectangleAdapter.cpp" />
+    <ClCompile Include="SFMLTriangleAdapter.cpp" />
+    <ClCompile Include="ShapesController.cpp" />
+    <ClCompile Include="SFMLWindowHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CalcModule.h" />
-    <ClInclude Include="CCanvas.h" />
+    <ClInclude Include="Application.h" />
     <ClInclude Include="CCircle.h" />
     <ClInclude Include="CLineSegment.h" />
+    <ClInclude Include="CompositeShape.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="CPoint.h" />
     <ClInclude Include="CRectangle.h" />
     <ClInclude Include="CTriangle.h" />
-    <ClInclude Include="ICanvasDrawable.h" />
+    <ClInclude Include="Drawing.h" />
+    <ClInclude Include="DrawingRenderer.h" />
+    <ClInclude Include="ShapeController.h" />
     <ClInclude Include="IShape.h" />
+    <ClInclude Include="IShapeAdapter.h" />
     <ClInclude Include="ISolidShape.h" />
-    <ClInclude Include="OutputModule.h" />
     <ClInclude Include="ParseStringModule.h" />
-    <ClInclude Include="SfmlWindowModule.h" />
+    <ClInclude Include="SelectionManager.h" />
+    <ClInclude Include="SFMLCircleAdapter.h" />
+    <ClInclude Include="SFMLLineAdapter.h" />
+    <ClInclude Include="SFMLRectangleAdapter.h" />
+    <ClInclude Include="SFMLTriangleAdapter.h" />
+    <ClInclude Include="SFMLWindowHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,8 +11,7 @@ TEST_CASE("test programm")
 	{
 		std::ifstream file("test_data.txt");
 		std::vector<std::unique_ptr<IShape>> shapes;
-		std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-		GetShapes(file, shapes, drawableShapes);
+		GetShapes(file, shapes);
 		REQUIRE(shapes[0]->GetShapeType() == "rectangle");
 		REQUIRE(shapes[1]->GetShapeType() == "circle");
 		REQUIRE(shapes[2]->GetShapeType() == "line");
@@ -24,8 +23,7 @@ TEST_CASE("test programm")
 	{
 		std::ifstream file("test_data_2.txt");
 		std::vector<std::unique_ptr<IShape>> shapes;
-		std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-		GetShapes(file, shapes, drawableShapes);
+		GetShapes(file, shapes);
 		REQUIRE(shapes[0]->GetShapeType() == "rectangle");
 		REQUIRE(shapes[1]->GetShapeType() == "circle");
 		REQUIRE(shapes[2]->GetShapeType() == "line");
@@ -37,8 +35,7 @@ TEST_CASE("test programm")
 	{
 		std::ifstream file("test_data_3.txt");
 		std::vector<std::unique_ptr<IShape>> shapes;
-		std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-		GetShapes(file, shapes, drawableShapes);
+		GetShapes(file, shapes);
 		REQUIRE(shapes[0]->GetShapeType() == "line");
 		REQUIRE(shapes[1]->GetShapeType() == "line");
 		REQUIRE(shapes[2]->GetShapeType() == "line");
@@ -50,8 +47,7 @@ TEST_CASE("test programm")
 	{
 		std::ifstream file("test_data_4.txt");
 		std::vector<std::unique_ptr<IShape>> shapes;
-		std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-		GetShapes(file, shapes, drawableShapes);
+		GetShapes(file, shapes);
 		REQUIRE(shapes[0]->GetShapeType() == "triangle");
 		REQUIRE(shapes[1]->GetShapeType() == "triangle");
 		REQUIRE(shapes[2]->GetShapeType() == "rectangle");

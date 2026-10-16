@@ -11,8 +11,8 @@ TEST_CASE("test triangle")
 {
     std::ifstream InFile("test_data_triangle.txt");
     std::vector<std::unique_ptr<IShape>> shapes;
-    std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-    GetShapes(InFile, shapes, drawableShapes);
+
+    GetShapes(InFile, shapes);
 
     SECTION("test perimeter calculation")
     {

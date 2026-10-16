@@ -29,9 +29,6 @@
     <ClCompile Include="tests.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\laba_4_oop\CCanvas.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="..\laba_4_oop\CCircle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -48,9 +45,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\laba_4_oop\ParseStringModule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\laba_4_oop\CalcModule.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="tests_circle.cpp">

@@ -1,6 +1,6 @@
-#include <vector>
+//#include <vector>
 #include "catch-sample_1.h"
-#include "catch/fakeit.hpp"
+/*#include "catch/fakeit.hpp"
 #include "laba_4_oop/ICanvas.h"
 #include "laba_4_oop/CRectangle.h"
 #include "laba_4_oop/CTriangle.h"
@@ -195,4 +195,4 @@ TEST_CASE("Testing drawing")
     }
 
 
-}
+}*/

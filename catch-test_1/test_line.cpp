@@ -11,8 +11,7 @@ TEST_CASE("test line segment")
 {
     std::ifstream InFile("test_data_line.txt");
     std::vector<std::unique_ptr<IShape>> shapes;
-    std::vector<std::unique_ptr<ICanvasDrawable>> drawableShapes;
-    GetShapes(InFile, shapes, drawableShapes);
+    GetShapes(InFile, shapes);
 
     REQUIRE(shapes.size() == 3); 
 
